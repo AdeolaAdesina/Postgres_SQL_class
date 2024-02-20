@@ -409,12 +409,18 @@ Use Case: List all products, including their category names, ensuring no NULL va
 SELECT Products.Name, Categories.CategoryName FROM Products JOIN Categories ON Products.CategoryID = Categories.CategoryID WHERE Categories.CategoryName IS NOT NULL;
 ```
 
-19. Understanding CTEs
+19. Understanding CTEs and subqueries
+
+## CTEs
 
 A Common Table Expression (CTE) provides a way to create a temporary result set that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement. CTEs are particularly useful for breaking down complex queries into simpler parts.
 
+
+
 Example: Customer Retention Analysis
 Objective Simplified: Identify customers who have made more than 1 order.
+
+
 
 Let's break this down into a simpler CTE example:
 
@@ -433,18 +439,26 @@ FROM CustomerOrderCounts
 WHERE NumberOfOrders > 1;
 ```
 
+
+
 Breakdown:
 
 CTE Definition: The WITH clause starts the CTE, naming it CustomerOrderCounts. This CTE selects the CustomerID from the Orders table and counts how many orders each customer has made.
 
+
 CTE Usage: After defining the CTE, the main query (SELECT CustomerID FROM CustomerOrderCounts WHERE NumberOfOrders > 1) uses the result set of the CTE to find customers who have made more than 1 order.
 
 
-Understanding Subqueries
+
+## Understanding Subqueries
+
+
 A subquery is a query nested inside another query. It can be used in various places, including the SELECT, FROM, and WHERE clauses of the main query.
+
 
 Example: Find Products with Above Average Price
 Objective Simplified: List all products that have a price above the average price of all products.
+
 
 ```
 SELECT Name, Price
@@ -457,22 +471,32 @@ WHERE Price > (
 
 Breakdown:
 
+
 Subquery: The subquery (SELECT AVG(Price) FROM Products) calculates the average price of all products in the Products table.
+
 
 Main Query: The main query selects the name and price of products from the Products table where the product's price is greater than the average price calculated by the subquery.
 
 
-- Combining CTEs and Subqueries
+
+
+##  Combining CTEs and Subqueries
+
+
 Now, let's slightly increase the complexity by combining a CTE with a subquery.
 
+
 Example: Customers with Above Average Orders
+
 Objective: Identify customers who have made a number of orders above the average, using both a CTE and a subquery.
+
+
 
 ```
 WITH CustomerOrderCounts AS (
   SELECT 
     CustomerID, 
-    COUNT(OrderID) AS NumberOfOrders
+    COUNT(OrderID)aaaaa AS NumberOfOrders
   FROM Orders
   GROUP BY CustomerID
 )
@@ -485,12 +509,16 @@ WHERE NumberOfOrders > (
 ```
 
 
+
 Breakdown:
+
 
 CTE (CustomerOrderCounts): This CTE calculates the number of orders each customer has made.
 
+
 Subquery in WHERE Clause: The subquery (SELECT AVG(NumberOfOrders) FROM CustomerOrderCounts) calculates the average number of orders made by all customers.
 Main Query with CTE and Subquery: The main query then selects customers from the CustomerOrderCounts CTE whose number of orders is greater than this average.
+
 
 By breaking down complex queries into smaller, more manageable parts, both CTEs and subqueries help improve the readability and maintainability of SQL code, making it easier to understand and debug. This step-by-step approach allows you to tackle more complex data analysis tasks by building on simpler concepts.
 
