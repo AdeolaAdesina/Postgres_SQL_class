@@ -31,7 +31,8 @@ Orders
 - CustomerID (Foreign Key)
 - OrderDate
 - Status
-- OrderDetails
+
+OrderDetails
 
 - OrderDetailID (Primary Key)
 - OrderID (Foreign Key)
