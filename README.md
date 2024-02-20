@@ -219,11 +219,11 @@ SELECT Name, Price FROM Products WHERE Price > 50;
 ```
 
 - =	Equal to
-- <	Less than
-- >	Greater than
-- <=	Less than or equal to
-- >=	Greater than or equal to
-- <>	Not equal to
+- ```<```	Less than
+- ```>```	Greater than
+- ```<=```	Less than or equal to
+- ```>=```	Greater than or equal to
+- ```<>```	Not equal to
 - !=	Not equal to
 - LIKE	Check if a value matches a pattern (case sensitive)
 - ILIKE	Check if a value matches a pattern (case insensitive)
