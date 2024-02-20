@@ -496,6 +496,15 @@ By breaking down complex queries into smaller, more manageable parts, both CTEs 
 
 
 
+# Approach to solving problems in SQL
+
+- Always understand all the tables in the database.
+- Always understand the relationships between all the tables.
+- Identify the tables needed to solve a particular problem
+- Figure out what field in each table is needed for analysis
+- Figure out if you need a simple query, a CTE or Sub-query
+
+
 
 # Business Problem 1: Customer Retention Analysis
 
