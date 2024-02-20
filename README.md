@@ -11,18 +11,21 @@ Customers
 - City
 - Province
 - PostalCode
-- Products
+
+Products
 
 - ProductID (Primary Key)
 - Name
 - Description
 - Price
 - CategoryID (Foreign Key)
-- Categories
+
+Categories
 
 - CategoryID (Primary Key)
 - CategoryName
-- Orders
+
+Orders
 
 - OrderID (Primary Key)
 - CustomerID (Foreign Key)
