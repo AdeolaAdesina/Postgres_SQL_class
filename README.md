@@ -41,7 +41,7 @@ OrderDetails
 - Price
 
 
-##Step 2: Creating the Schema in PostgreSQL
+## Step 2: Creating the Schema in PostgreSQL
 
 Below are the SQL statements to create these tables in a PostgreSQL database, including primary keys, foreign keys, and some basic constraints like NOT NULL for essential fields.
 
