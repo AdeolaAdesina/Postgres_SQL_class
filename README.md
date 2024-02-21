@@ -150,6 +150,7 @@ INSERT INTO Categories (CategoryName) VALUES
 
 Insert data into "Products"
 
+```
 INSERT INTO Products (Name, Description, Price, CategoryID) VALUES
 ('Laptop', 'A high-performance laptop.', 1200.00, 1),
 ('Database Management Book', 'A comprehensive guide to database management.', 45.00, 2),
@@ -161,7 +162,7 @@ INSERT INTO Products (Name, Description, Price, CategoryID) VALUES
 ('Dog Leash', 'Strong and durable leash for dogs.', 9.99, 8),
 ('Organic Almonds', 'Raw organic almonds, 1lb.', 15.99, 9),
 ('Car Wax', 'High-quality wax for car care.', 23.99, 10);
-
+```
 
 Insert data into "Orders"
 
