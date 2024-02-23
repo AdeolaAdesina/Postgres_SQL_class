@@ -305,6 +305,9 @@ SELECT CategoryID, COUNT(*) FROM Products GROUP BY CategoryID;
 ```
 
 
+9b. DISTINCT COUNT
+
+
 10. SUM and AVERAGE
 Use Case: Calculate the total sales and average sales per order to gauge performance.
 
